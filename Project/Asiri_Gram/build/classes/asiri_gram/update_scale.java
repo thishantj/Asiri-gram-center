@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -50,6 +51,8 @@ public class update_scale extends javax.swing.JFrame {
         jLabel_parentName1 = new javax.swing.JLabel();
         cmblicensestatus = new javax.swing.JComboBox();
         jdate = new com.toedter.calendar.JDateChooser();
+        jLabel_firstName3 = new javax.swing.JLabel();
+        ldate = new com.toedter.calendar.JDateChooser();
         jPanel3 = new javax.swing.JPanel();
         jLabel_lastName = new javax.swing.JLabel();
         txtscaleid = new javax.swing.JTextField();
@@ -73,43 +76,43 @@ public class update_scale extends javax.swing.JFrame {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel9.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 550, 140, 50));
+        jPanel9.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 500, 140, 50));
 
         txtscalename.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
-        jPanel9.add(txtscalename, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 750, 50));
+        jPanel9.add(txtscalename, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 550, 40));
 
         jLabel_firstName.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName.setText("Scale name : ");
-        jPanel9.add(jLabel_firstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
+        jPanel9.add(jLabel_firstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
 
         jLabel_parentName.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_parentName.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_parentName.setText("Status");
-        jPanel9.add(jLabel_parentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
+        jPanel9.add(jLabel_parentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, -1, -1));
 
         cmbstatus.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmbstatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Working", "New", "Broken", "Repairing", "Repaired", " " }));
-        jPanel9.add(cmbstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 750, 50));
+        jPanel9.add(cmbstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 550, 40));
 
         jLabel_dob.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_dob.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_dob.setText("Current location : ");
-        jPanel9.add(jLabel_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
+        jPanel9.add(jLabel_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, -1, -1));
 
         cmblocation.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmblocation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Stores", "Factory", "IDH", "Eriyawetiya", "Kiribathgoda", "Makola", "Mawaramandiya", "Delgoda", "Kokiskade", "Baththaramulla", "Athurugiriya", "Hendala", "Weliweriya", "Homagama", "Dalugama", "Wenappuwa", "Nagahamula", "Weyangoda", "Maligawatta", "Kaduwela", "Malabe", "Biyagama", "Kolonnawa", "Arangala", "Welisara", "Nugegoda", "Minuwangoda", "Kandana", "Arcade" }));
-        jPanel9.add(cmblocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 750, 50));
+        jPanel9.add(cmblocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 550, 40));
 
         jLabel_firstName1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName1.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName1.setText("Purchase date :");
-        jPanel9.add(jLabel_firstName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
+        jPanel9.add(jLabel_firstName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
         jLabel_firstName2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName2.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName2.setText("Price :");
-        jPanel9.add(jLabel_firstName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
+        jPanel9.add(jLabel_firstName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
         txtprice.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         txtprice.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -117,19 +120,31 @@ public class update_scale extends javax.swing.JFrame {
                 txtpriceKeyTyped(evt);
             }
         });
-        jPanel9.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 750, 50));
+        jPanel9.add(txtprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 550, 40));
 
         jLabel_parentName1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_parentName1.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_parentName1.setText("License status");
-        jPanel9.add(jLabel_parentName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
+        jPanel9.add(jLabel_parentName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
 
         cmblicensestatus.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmblicensestatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Licensed", "Not licensed" }));
-        jPanel9.add(cmblicensestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 750, 50));
+        jPanel9.add(cmblicensestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 550, 40));
 
         jdate.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
-        jPanel9.add(jdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 750, 50));
+        jdate.setMaxSelectableDate(new Date()
+        );
+        jPanel9.add(jdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 550, 40));
+
+        jLabel_firstName3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
+        jLabel_firstName3.setForeground(new java.awt.Color(132, 132, 132));
+        jLabel_firstName3.setText("License date :");
+        jPanel9.add(jLabel_firstName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
+
+        ldate.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        ldate.setMaxSelectableDate(new Date()
+        );
+        jPanel9.add(ldate, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 550, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -161,23 +176,22 @@ public class update_scale extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(138, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel_lastName)
                 .addGap(18, 18, 18)
-                .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
                 .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(131, 131, 131))
+                .addGap(440, 440, 440))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_lastName)
-                    .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         btnhome.setBackground(new java.awt.Color(255, 255, 255));
@@ -199,34 +213,38 @@ public class update_scale extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 1323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnhome, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnhome, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(522, 522, 522))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 959, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 959, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(359, 359, 359))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(btnhome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnhome, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 607, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -238,9 +256,9 @@ public class update_scale extends javax.swing.JFrame {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
-            Connection conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=asiri;user=admin;password=123456");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/asiri","root","admin");
             
-            String sql = "update scales set scalename=?, pdate=?, price=?, lstatus=?, status=?, location=? where scaleID = '"+txtscaleid.getText()+"'";
+            String sql = "update scales set scalename=?, pdate=?, price=?, lstatus=?, ldate=?, status=?, location=? where scaleID = '"+txtscaleid.getText()+"'";
             
             PreparedStatement pst = conn.prepareStatement(sql);
             
@@ -249,8 +267,9 @@ public class update_scale extends javax.swing.JFrame {
             pst.setString(2, new SimpleDateFormat("MMM d, yyyy").format(jdate.getDate() ) );
             pst.setString(3, txtprice.getText() );
             pst.setString(4, cmblicensestatus.getSelectedItem().toString() );
-            pst.setString(5, cmbstatus.getSelectedItem().toString());
-            pst.setString(6, cmblocation.getSelectedItem().toString() );
+            pst.setString(5, new SimpleDateFormat("MMM d, yyyy").format(ldate.getDate() ) );
+            pst.setString(6, cmbstatus.getSelectedItem().toString());
+            pst.setString(7, cmblocation.getSelectedItem().toString() );
             
             pst.executeUpdate();
             
@@ -278,6 +297,7 @@ public class update_scale extends javax.swing.JFrame {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/asiri","root","admin");
             Connection conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=asiri;user=admin;password=123456");
         
             String sql = "select * from scales where scaleID = ?";
@@ -295,6 +315,7 @@ public class update_scale extends javax.swing.JFrame {
                 jdate.setDate(rs.getDate("pdate"));
                 txtprice.setText(rs.getString("price"));
                 cmblicensestatus.setSelectedItem("lstatus");
+                ldate.setDate(rs.getDate("ldate"));
                 cmbstatus.setSelectedItem(rs.getString("status"));
                 cmblocation.setSelectedItem(rs.getString("location"));
             }
@@ -375,6 +396,7 @@ public class update_scale extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_firstName;
     private javax.swing.JLabel jLabel_firstName1;
     private javax.swing.JLabel jLabel_firstName2;
+    private javax.swing.JLabel jLabel_firstName3;
     private javax.swing.JLabel jLabel_lastName;
     private javax.swing.JLabel jLabel_parentName;
     private javax.swing.JLabel jLabel_parentName1;
@@ -382,6 +404,7 @@ public class update_scale extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel9;
     private com.toedter.calendar.JDateChooser jdate;
+    private com.toedter.calendar.JDateChooser ldate;
     private javax.swing.JTextField txtprice;
     private javax.swing.JTextField txtscaleid;
     private javax.swing.JTextField txtscalename;

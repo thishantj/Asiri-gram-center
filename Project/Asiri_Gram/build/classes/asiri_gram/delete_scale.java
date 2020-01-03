@@ -52,6 +52,8 @@ public class delete_scale extends javax.swing.JFrame {
         jLabel_parentName1 = new javax.swing.JLabel();
         cmblicensestatus = new javax.swing.JComboBox();
         jdate = new com.toedter.calendar.JDateChooser();
+        ldate = new com.toedter.calendar.JDateChooser();
+        jLabel_firstName3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel_lastName = new javax.swing.JLabel();
         txtscaleid = new javax.swing.JTextField();
@@ -98,7 +100,7 @@ public class delete_scale extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnhome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+            .addComponent(btnhome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
             .addComponent(btnexit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
@@ -118,28 +120,28 @@ public class delete_scale extends javax.swing.JFrame {
         jLabel_firstName.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName.setText("Scale name : ");
-        jPanel10.add(jLabel_firstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
+        jPanel10.add(jLabel_firstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         txtscalename.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
-        jPanel10.add(txtscalename, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 750, 50));
+        jPanel10.add(txtscalename, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 480, 40));
 
         jLabel_dob.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_dob.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_dob.setText("Current location : ");
-        jPanel10.add(jLabel_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, -1, -1));
+        jPanel10.add(jLabel_dob, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, -1, -1));
 
         jLabel_parentName.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_parentName.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_parentName.setText("Status");
-        jPanel10.add(jLabel_parentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, -1, -1));
+        jPanel10.add(jLabel_parentName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         cmblocation.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmblocation.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Stores", "Factory", "IDH", "Eriyawetiya", "Kiribathgoda", "Makola", "Mawaramandiya", "Delgoda", "Kokiskade", "Baththaramulla", "Athurugiriya", "Hendala", "Weliweriya", "Homagama", "Dalugama", "Wenappuwa", "Nagahamula", "Weyangoda", "Maligawatta", "Kaduwela", "Malabe", "Biyagama", "Arangala", "Kolonnawa", "Welisara", "Nugegoda", "Minuwangoda", "Kandana", "Arcade" }));
-        jPanel10.add(cmblocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 750, 50));
+        jPanel10.add(cmblocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 480, 40));
 
         cmbstatus.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmbstatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Working", "New", "Broken", "Repairing", "Repaired", " " }));
-        jPanel10.add(cmbstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 750, 50));
+        jPanel10.add(cmbstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 480, 40));
 
         btn_delete.setBackground(new java.awt.Color(255, 153, 153));
         btn_delete.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
@@ -150,17 +152,17 @@ public class delete_scale extends javax.swing.JFrame {
                 btn_deleteActionPerformed(evt);
             }
         });
-        jPanel10.add(btn_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 580, 140, 50));
+        jPanel10.add(btn_delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 520, 140, 50));
 
         jLabel_firstName1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName1.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName1.setText("Purchase date :");
-        jPanel10.add(jLabel_firstName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
+        jPanel10.add(jLabel_firstName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         jLabel_firstName2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_firstName2.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_firstName2.setText("Price :");
-        jPanel10.add(jLabel_firstName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, -1));
+        jPanel10.add(jLabel_firstName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         txtprice1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         txtprice1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -168,19 +170,27 @@ public class delete_scale extends javax.swing.JFrame {
                 txtprice1KeyTyped(evt);
             }
         });
-        jPanel10.add(txtprice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 750, 50));
+        jPanel10.add(txtprice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 480, 40));
 
         jLabel_parentName1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
         jLabel_parentName1.setForeground(new java.awt.Color(132, 132, 132));
         jLabel_parentName1.setText("License status");
-        jPanel10.add(jLabel_parentName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, -1, -1));
+        jPanel10.add(jLabel_parentName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
 
         cmblicensestatus.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         cmblicensestatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Licensed", "Not licensed" }));
-        jPanel10.add(cmblicensestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 750, 50));
+        jPanel10.add(cmblicensestatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 480, 40));
 
         jdate.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
-        jPanel10.add(jdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 750, 50));
+        jPanel10.add(jdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 480, 40));
+
+        ldate.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jPanel10.add(ldate, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 480, 40));
+
+        jLabel_firstName3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 22)); // NOI18N
+        jLabel_firstName3.setForeground(new java.awt.Color(132, 132, 132));
+        jLabel_firstName3.setText("License date :");
+        jPanel10.add(jLabel_firstName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -214,20 +224,19 @@ public class delete_scale extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel_lastName)
                 .addGap(18, 18, 18)
-                .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110)
                 .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addGap(351, 351, 351))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_lastName)
-                    .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtscaleid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -236,21 +245,23 @@ public class delete_scale extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 1128, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGap(54, 54, 54)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -261,7 +272,7 @@ public class delete_scale extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -296,6 +307,7 @@ public class delete_scale extends javax.swing.JFrame {
             try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/asiri","root","admin");
             Connection conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=asiri;user=admin;password=123456");
         
             String sql = "select * from scales where scaleID = ?";
@@ -313,6 +325,7 @@ public class delete_scale extends javax.swing.JFrame {
                 jdate.setDate(rs.getDate("pdate"));
                 txtprice1.setText(rs.getString("price"));
                 cmblicensestatus.setSelectedItem("lstatus");
+                ldate.setDate(rs.getDate("ldate"));
                 cmbstatus.setSelectedItem(rs.getString("status"));
                 cmblocation.setSelectedItem(rs.getString("location"));
                 
@@ -336,6 +349,7 @@ public class delete_scale extends javax.swing.JFrame {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
+//            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/asiri","root","admin");
             Connection conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=asiri;user=admin;password=123456");
             
             String sql = "delete from scales where scaleID = '"+txtscaleid.getText()+"'";
@@ -350,6 +364,7 @@ public class delete_scale extends javax.swing.JFrame {
             txtscalename.setText("");
             txtprice1.setText("");
             jdate.setDate(null);
+            ldate.setDate(null);
                        
             
         }catch(Exception e){
@@ -415,6 +430,7 @@ public class delete_scale extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_firstName;
     private javax.swing.JLabel jLabel_firstName1;
     private javax.swing.JLabel jLabel_firstName2;
+    private javax.swing.JLabel jLabel_firstName3;
     private javax.swing.JLabel jLabel_lastName;
     private javax.swing.JLabel jLabel_parentName;
     private javax.swing.JLabel jLabel_parentName1;
@@ -423,6 +439,7 @@ public class delete_scale extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private com.toedter.calendar.JDateChooser jdate;
+    private com.toedter.calendar.JDateChooser ldate;
     private javax.swing.JTextField txtprice1;
     private javax.swing.JTextField txtscaleid;
     private javax.swing.JTextField txtscalename;
